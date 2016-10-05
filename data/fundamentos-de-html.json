@@ -1,0 +1,559 @@
+{
+  "title": "Fundamentos de HTML",
+  "lang": "es",
+  "duration": 60,
+  "questions": [
+    {
+      "type": "multiselect",
+      "question": "¿Qué es un documento HTML?",
+      "options": [
+        "Un archivo de texto.",
+        "Un recurso web.",
+        "Un archivo sin formato especial.",
+        "Un archivo con un formato especial y normalizado por una especificación."
+      ],
+      "correct": [0, 1, 3]
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué componentes son obligatorios en un elemento HTML?",
+      "options": [
+        "La etiqueta de inicio, por ejemplo, `<p>`.",
+        "Los atributos globales de la etiqueta de inicio.",
+        "El contenido entre las etiquetas de inicio y fin.",
+        "La etiqueta de fin, por ejemplo, `</p>`",
+        "Los atributos globales de la etiqueta de fin."
+      ],
+      "correct": [0]
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son las sintaxis correctas de los atributos?",
+      "options": [
+        "`nombre`",
+        "`nombre=valor`",
+        "`nombre=\"valor\"`",
+        "`nombre='valor'`"
+      ],
+      "correct": [0, 2, 3]
+    },
+    {
+      "type": "select",
+      "question": "¿Qué marca un documento como HTML?",
+      "options": [
+        "`<doctype html>`",
+        "`<!doctype html>`",
+        "`<html>`",
+        "`<!html>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es el elemento raíz de un documento HTML?",
+      "options": [
+        "`<doctype html>`",
+        "`<!doctype html>`",
+        "`<html>`",
+        "`<!html>`"
+      ],
+      "correct": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son los elementos hijos de un elemento `<html>`?",
+      "options": [
+        "`<doctype>`",
+        "`<head>`",
+        "`<header>`",
+        "`<body>`",
+        "`<main>`",
+        "`<content>`"
+      ],
+      "correct": [1, 3]
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se recomienda que los documentos dispongan de título, `<title>`?",
+      "correct": true
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se recomienda que los documentos dispongan de descripción, `<meta name='description'>`?",
+      "correct": true
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué atributos se indica el idioma en que se encuentra el contenido de un documento?",
+      "options": [
+        "`lang`",
+        "`language`",
+        "`id`",
+        "`idiom`",
+        "`to`",
+        "`tongue`"
+      ],
+      "correct": [0]
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál de las siguientes proposiciones representa un comentario HTML?",
+      "options": [
+        "`<--comentario-->`",
+        "`<!--comentario-->`",
+        "`<--comentario>`",
+        "`<!--comentario>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede expandir un comentario HTML en varias líneas?",
+      "correct": true
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es un documento bien formado?",
+      "options": [
+        "Aquel que cumple las reglas de la especificación HTML.",
+        "Aquel que cumple las reglas de las especificación HTML y sólo utiliza elementos definidos en la especificación HTML.",
+        "Aquel que está bien escrito."
+      ],
+      "correct": 0
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es un documento válido?",
+      "options": [
+        "Aquel que cumple las reglas de la especificación HTML.",
+        "Aquel que cumple las reglas de las especificación HTML y sólo utiliza elementos definidos en la especificación HTML.",
+        "Aquel que está bien escrito."
+      ],
+      "correct": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se fija el formato de codificación de caracteres a `UTF-8`?",
+      "options": [
+        "`<meta name='charset' content='utf-8'>`",
+        "`<meta charset='utf-8'>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede usar un elemento en línea dentro de un elemento de bloque?",
+      "correct": true
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede usar un elemento de bloque dentro de otro elemento de bloque?",
+      "correct": true
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede usar un elemento en línea dentro de otro elemento en línea?",
+      "correct": true
+    },
+    {
+      "type": "select",
+      "question": "¿Mediante qué elemento de bloque se indica contenido de cabecera en el elemento `<body>`?",
+      "options": [
+        "`<head>`",
+        "`<header>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Mediante qué elemento de bloque se indica contenido de pie de documento en el elemento `<body>`?",
+      "options": [
+        "`<foot>`",
+        "`<footer>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "select",
+      "question": "En principio, ¿cuántos elementos `<h1>` debe tener un documento HTML?",
+      "options": [
+        "0",
+        "1",
+        "Tantos como sea necesario."
+      ],
+      "correct": 1,
+      "postnote": "Por cuestiones **SEO**, se recomienda que un documento HTML sólo disponga de un `<h1>`."
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento utilizaría para delimitar una cita?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<blockquote>"
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué elementos representan énfasis?",
+      "prenote": "Nos referimos a aquello que suele mostrarse en cursiva.",
+      "options": [
+        "`<em>`",
+        "`<emp>`",
+        "`<i>`",
+        "`<it>`",
+        "`<strong>`",
+        "`<b>`",
+        "`<bold>`",
+        "`<span>`"
+      ],
+      "correct": [0, 2]
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué elementos representan importancia?",
+      "prenote": "Nos referimos a aquello que suele mostrarse en negrita.",
+      "options": [
+        "`<em>`",
+        "`<emp>`",
+        "`<i>`",
+        "`<it>`",
+        "`<strong>`",
+        "`<b>`",
+        "`<bold>`",
+        "`<span>`"
+      ],
+      "correct": [4, 5]
+    },
+    {
+      "type": "input",
+      "question": "Mediante qué elemento se denota un elemento en bloque para el que HTML no tiene uno específico.",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<div>"
+    },
+    {
+      "type": "input",
+      "question": "Mediante qué elemento se denota un elemento en línea para el que HTML no tiene uno específico.",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<span>"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento en línea se recomienda usar cuando se va a mostrar una fecha y/u hora?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<time>"
+    },
+    {
+      "type": "input",
+      "question": "En un párrafo `<p>`, ¿cómo indicaría un salto de línea que no sea el implícito que lleva el párrafo al inicio y al final?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<br>"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento se puede usar para indicar una línea horizontal?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<hr>"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué entidad utilizaría para añadir el carácter `<` como contenido a presentar al usuario?",
+      "correct": "&lt;"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué entidad utilizaría para indicar el símbolo de copyright?",
+      "correct": "&copy;"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué entidad utilizaría para indicar el símbolo `&`?",
+      "correct": "&amp;"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento de bloque delimita una lista ordenada?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<ol>"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento de bloque delimita una lista desordenada?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<ul>"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué elemento de bloque delimita una lista de definición?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<dl>"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se indica el título de una tabla?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<caption>"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se indica las filas de cabecera de una tabla?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<thead>"
+    },
+    {
+      "type": "select",
+      "question": "En una cabecera de tabla, ¿qué elemento se recomienda usar para delimitar las celdas de las filas?",
+      "options": [
+        "`<td>`",
+        "`<th>`"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se recomienda delimitar las filas de datos de una tabla?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<tbody>"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se indica las filas resúmenes de una tabla, o sea, el pie de tabla?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<tfoot>"
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué elementos se incrusta una imagen para que el navegador la muestre como parte del documento?",
+      "options": [
+        "`<a>`",
+        "`<image>`",
+        "`<img>`",
+        "`<link>`"
+      ],
+      "correct": [2],
+      "postnote": "`<a>` muestra un enlace a la imagen, no muestra la imagen."
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué rutas son absolutas?",
+      "options": [
+        "mi.html",
+        "./mi.html",
+        "../mi.html",
+        "/mi.html"
+      ],
+      "correct": [3]
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué rutas son relativas?",
+      "options": [
+        "mi.html",
+        "./mi.html",
+        "../mi.html",
+        "/mi.html"
+      ],
+      "correct": [0, 1, 2]
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se recomienda indicar el atributo `alt` en un `<img>`?",
+      "correct": true
+    },
+    {
+      "type": "select",
+      "question": "¿Mediante qué atributo se indica el URL del recurso referenciado en un elemento `<a>`?",
+      "options": [
+        "`href`",
+        "`link`",
+        "`src`",
+        "`source`"
+      ],
+      "correct": 0
+    },
+    {
+      "type": "select",
+      "question": "¿Mediante qué atributo se indica el URL referenciado en un elemento `<img>`?",
+      "options": [
+        "`href`",
+        "`link`",
+        "`src`",
+        "`source`"
+      ],
+      "correct": 2
+    },
+    {
+      "type": "input",
+      "question": "Cuando deseamos mostrar un menú de enlaces, en la parte superior del documento HTML, ¿dentro de qué elemento HTML se recomienda agruparlos?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<nav>"
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué necesita el navegador para reproducir un archivo de audio?",
+      "options": [
+        "Disponer de un reproductor de audio.",
+        "Disponer del *codec* del formato de codificación del audio."
+      ],
+      "correct": [0, 1]
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se incrusta en el documento HTML un archivo de audio?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<audio>"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento se incrusta en el documento HTML un archivo de video?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<video>"
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del atributo mediante el cual se indica al navegador que su reproductor muestre los controles de reproducción?",
+      "correct": "controls"
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se recomienda reproducir audio o video automáticamente?",
+      "correct": false
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del atributo mediante el cual se indica el URL del archivo de audio o video?",
+      "correct": "src"
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del atributo mediante el cual se indica la imagen que debe presentar el reproductor de video antes de iniciar la reproducción?",
+      "correct": "poster"
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el mejor tipo del elemento `<input>` para solicitar un año de nacimiento?",
+      "correct": "number"
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el tipo predeterminado del elemento `<input>`?",
+      "correct": "text"
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es el mejor elemento de entrada de datos, si el usuario debe introducir varias líneas?",
+      "options": [
+        "`<input type='text'>`",
+        "`<input type='textarea'>`",
+        "`<input type='text-area'>`",
+        "`<textarea>`",
+        "`<text-area>`"
+      ],
+      "correct": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es el mejor tipo de `<input>` si el usuario debe introducir una fecha?",
+      "options": [
+        "`date`",
+        "`datetime`",
+        "`date-time`",
+        "`time`"
+      ],
+      "correct": 0
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es el mejor tipo de `<input>` si el usuario debe introducir una hora?",
+      "options": [
+        "`date`",
+        "`datetime`",
+        "`date-time`",
+        "`time`",
+        "`hour`"
+      ],
+      "correct": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué atributo hay que indicar en un `<input>` si deseamos que sea el elemento en el que empezar a introducir datos?",
+      "correct": "autofocus"
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el tipo de `<input>` con el que indicar una casilla de confirmación?",
+      "correct": "checkbox"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué elemento crearías un desplegable de opciones de las que el usuario debe seleccionar una única opción?",
+      "prenote": "Indíquelo en formato `<elemento>`.",
+      "correct": "<select>"
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es el tipo de `<input>` con el que definir un botón de envío de formulario?",
+      "options": [
+        "`button`",
+        "`send`",
+        "`submit`",
+        "`form`"
+      ],
+      "correct": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántos botones de envío, como máximo, puede tener un formulario?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Tantos como sea necesario"
+      ],
+      "correct": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué atributo se asocia un `<label>` a un `<input>`?",
+      "correct": "for"
+    },
+    {
+      "type": "input",
+      "question": "¿Qué atributo hay que indicar en un `<form>` para desactivar la validación del navegador?",
+      "correct": "novalidate"
+    },
+    {
+      "type": "select",
+      "question": "De manera predeterminada, ¿un elemento de introducción de datos es obligatorio u opcional?",
+      "options": [
+        "Obligatorio",
+        "Opcional"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué atributo se indica la expresión regular que debe cumplir el valor introducido por el usuario en un `<input>`?",
+      "correct": "pattern"
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué atributo se indica la longitud mínima de caracteres que debe introducir el usuario en un `<input>`?",
+      "correct": "minlength"
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué atributos se indica el rango de valores que puede aceptar un `<input>`?",
+      "options": [
+        "`min`",
+        "`minimum`",
+        "`minvalue`",
+        "`min-value`",
+        "`minimumvalue`",
+        "`max`",
+        "`maximum`",
+        "`maxvalue`",
+        "`max-value`",
+        "`maximumvalue`"
+      ],
+      "correct": [0, 5]
+    }
+  ]
+}

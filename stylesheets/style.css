@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+.brand-color {
+  color: #F47920;
+}
+
+body {
+  font-family: 'Raleway';
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.duration {
+  font-size: 0.75rem;
+}
+
+h2 {
+  color: #F47920;
+}
+
+code {
+  color: #F47920;
+  background-color: transparent;
+}
+
+.sentence {
+  font-weight: bold;
+}
+
+.prenote {
+  font-style: italic;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.postnote {
+
+}
+
+.btn-outline-primary {
+  color: #F47920;
+  border-color: #F47920;
+}
+
+.btn-outline-primary:hover {
+  background-color: #F47920;
+  color: white;
+  border-color: white;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: #212121;
+  margin: 0;
+}
