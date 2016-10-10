@@ -1,0 +1,546 @@
+{
+  "title": "Desarrollo de aplicaciones webs con React",
+  "lang": "es",
+  "duration": 60,
+  "questions": [
+    {
+      "type": "select",
+      "question": "¿Qué tipo de aplicaciones se desarrollan mediante el *framework* *React*?",
+      "options": [
+        "SPA",
+        "MPA"
+      ],
+      "correct": 0,
+      "lesson": 1
+    },
+    {
+      "type": "multiselect",
+      "question": "De manera predeterminada, ¿qué incluye *Browserify* en el archivo empaquetado (o *bundle file*)?",
+      "options": [
+        "El *framework* *React*.",
+        "Los archivos HTML de la aplicación.",
+        "Los archivos JSON de la aplicación.",
+        "Cualquier biblioteca JavaScript importada por la aplicación *React*, directa o indirectamente."
+      ],
+      "correct": [0, 3],
+      "lesson": 2
+    },
+    {
+      "type": "confirm",
+      "question": "¿Es obligatorio utilizar *Browserify* en el desarrollo de aplicaciones *React*?",
+      "correct": false,
+      "postnote": "También se puede usar *webpack* en vez de *Browserify*.",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué archivos hay que pasar a *Browserify* para que genere el archivo empaquetado?",
+      "options": [
+        "Los archivos HTML.",
+        "Los archivos CSS",
+        "Los archivos JavaScript.",
+        "El archivo JavaScript de punto de entrada de la aplicación."
+      ],
+      "correct": [3],
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué opción de *Browserify* se indica la variable global bajo la cual se encuentra la aplicación empaquetada?",
+      "prenote": "Por favor, indica su nombre en formato `--nombre`.",
+      "correct": "--standalone",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué paquetes implementan la lógica de *React*?",
+      "options": [
+        "flux",
+        "lodash",
+        "marked",
+        "react",
+        "react-dom",
+        "react-router"
+      ],
+      "correct": [3, 4],
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Una aplicación *React* requiere una estructura de directorios particular?",
+      "options": [
+        "Sí. *React* no es flexible en este aspecto.",
+        "No."
+      ],
+      "correct": 1,
+      "postnote": "No es necesario, pero se recomienda usar algún convenio.",
+      "lesson": 3
+    },
+    {
+      "type": "confirm",
+      "question": "¿Es obligatorio utilizar *JSX* en los componentes *React*?",
+      "correct": false,
+      "postnote": "No hace falta. Pero se recomienda porque hace el código más fácil de leer y mantener.",
+      "lesson": 4
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es *JSX*?",
+      "options": [
+        "Un preprocesador de JavaScript.",
+        "Un lenguaje de programación basado en JavaScript."
+      ],
+      "correct": 0,
+      "lesson": 4
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué tipos de valor se pueden pasar al atributo `style` de los componentes?",
+      "options": [
+        "Una cadena de texto.",
+        "Un valor numérico",
+        "Un valor booleano.",
+        "Un objeto."
+      ],
+      "correct": [3],
+      "lesson": 4
+    },
+    {
+      "type": "select",
+      "question": "Si tenemos `<Componente {...{x: '7', y: '8'}} x='9' />`, ¿qué se está asignando realmente?",
+      "options": [
+        "`{x: '9', y: '8'}`",
+        "`{x: '7', y: '8'}`",
+        "Se producirá un error porque no se puede redefinir propiedades."
+      ],
+      "correct": 0,
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "Cuando se generan elementos JSX dinámicamente mediante el método `map()` de un *array*, qué atributo debe tener cada uno de los elementos devueltos por el método?",
+      "correct": "key",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "Suponga que la variable `x` contiene el texto `Esto es un <i>ejemplo</i>.`. ¿Cómo lo añadiría como contenido de un `<span>` para que se interprete como HTML? El resultado final debe ser `<span>Esto es un <i>ejemplo</i>.</span>`",
+      "prenote": "Por favor, omita espacios innecesarios en la respuesta.",
+      "correct": "<span dangerouslySetInnerHTML={{__html:x}}/>",
+      "lesson": 4
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es la manera recomendada para implementar componentes inmutables o sin estado?",
+      "options": [
+        "Mediante una clase.",
+        "Mediante una función."
+      ],
+      "correct": 1,
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son las fases del ciclo de vida de un componente inmutable o sin estado?",
+      "options": [
+        "Montaje",
+        "Actualización",
+        "Desmontaje"
+      ],
+      "correct": [0, 2],
+      "postnote": "Recuerda que los componentes inmutables siempre presentan la misma forma durante todo su ciclo de vida.",
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántas veces se invoca el método `render()` de un componente inmutable o sin estado?",
+      "options": [
+        "0",
+        "1",
+        "Más de 1"
+      ],
+      "correct": 1,
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cómo debe definirse las propiedades `defaultProps` y `propTypes`?",
+      "options": [
+        "Si el componente se implementa mediante una clase, mediante una propiedad estática.",
+        "Si el componente se implementa mediante una función, mediante un propiedad del objeto función.",
+        "Independientemente de como se defina, mediante una propiedad del objeto instancia, o sea, de `this`."
+      ],
+      "correct": [0, 1],
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "En la propiedad `propTypes` de un componente, ¿cómo se indica que una propiedad es de tipo texto y opcional?",
+      "options": [
+        "`prop: React.PropTypes.string.isOptional`",
+        "`prop: React.PropTypes.string`",
+        "`prop: React.PropTypes.text.isOptional`",
+        "`prop: React.PropType.text`"
+      ],
+      "correct": [1],
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "En la propiedad `propTypes` de un componente, ¿cómo se indica que una propiedad es de tipo texto y obligatoria?",
+      "options": [
+        "`prop: React.PropTypes.string.isMandatory`",
+        "`prop: React.PropTypes.string.isRequired`",
+        "`prop: React.PropTypes.string`",
+        "`prop: React.PropTypes.text.isMandatory`",
+        "`prop: React.PropTypes.text.isRequired`",
+        "`prop: React.PropTypes.text`"
+      ],
+      "correct": [1],
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "Selecciona qué expresiones son correctas a la hora de fijar el componente principal o punto de entrada de la aplicación:",
+      "options": [
+        "`Render.render(<App />)`",
+        "`Render.render(<App />, 'react-app')`",
+        "`Render.render(<App />, document.getElementById('react-app'))`",
+        "`RenderDOM.render(<App />)`",
+        "`RenderDOM.render(<App />, 'react-app')`",
+        "`RenderDOM.render(<App />, document.getElementById('react-app'))`"
+      ],
+      "correct": [2],
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son las fases del ciclo de vida de un componente mutable o con estado?",
+      "options": [
+        "Montaje",
+        "Actualización",
+        "Desmontaje"
+      ],
+      "correct": [0, 1, 2],
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántas veces se invoca el método `render()` de un componente mutable o con estado?",
+      "options": [
+        "0",
+        "1",
+        "1 ó más"
+      ],
+      "correct": 2,
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Dónde se puede inicializar el estado de un componente mutable o con estado?",
+      "options": [
+        "En su método constructor.",
+        "En su método `init()`.",
+        "Mediante el método `setState()`."
+      ],
+      "correct": [0],
+      "postnote": "Siempre debe hacerse en el método constructor, al mismo tiempo que definimos el atributo `state`.",
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles de los siguientes métodos, del ciclo de vida de un componente mutable o con estado, deben sobrescribirse para indicar si hay que llamar al método `render()`?",
+      "options": [
+        "`componentWillReceiverProps()`",
+        "`shouldComponentUpdate()`",
+        "`componentWillUpdate()`",
+        "`componentDidUpdate()`"
+      ],
+      "correct": [1],
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles de las siguientes invocaciones de método dispararán una nueva reproducción o *renderización* del componente?",
+      "options": [
+        "`this.forceUpdate()`",
+        "`this.forceUpdate({campo: valor})`",
+        "`this.setState({campo: valor})`"
+      ],
+      "correct": [0, 2],
+      "postnote": "El método `forceUpdate()` no permite cambiar el estado, pero fuerza una reproducción.",
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "El método `setState()`",
+      "options": [
+        "Cambia todo el estado del componente.",
+        "Actualiza el estado del componente, añadiendo o sobrescribiendo campos."
+      ],
+      "correct": [1],
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿Para qué se puede utilizar el objeto contexto, o sea, `this.context`?",
+      "options": [
+        "Para pasar datos de sólo lectura entre un componente y sus subcomponentes.",
+        "Para pasar datos de lectura/escritura entre un componente y sus subcomponentes."
+      ],
+      "correct": 0,
+      "lesson": 7
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué miembros debe definir un componente para **definir** su contexto?",
+      "options": [
+        "La propiedad de instancia `childContext`.",
+        "La propiedad estática `childContext`.",
+        "El método de instancia `getChildContext()`.",
+        "El método estático `getChildContext()`.",
+        "La propiedad de instancia `childContextTypes`.",
+        "La propiedad estática `childContextTypes`.",
+        "El método de instancia `getChildContextTypes()`.",
+        "El método estático `getChildContextTypes()`.",
+        "La propiedad de instancia `contextTypes`.",
+        "La propiedad estática `contextTypes`.",
+        "El método de instancia `getContextTypes()`.",
+        "El método estático `getContextTypes()`."
+      ],
+      "correct": [2, 5],
+      "lesson": 7
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué miembros debe definir un componente para **usar** un contexto?",
+      "options": [
+        "La propiedad de instancia `childContext`.",
+        "La propiedad estática `childContext`.",
+        "El método de instancia `getChildContext()`.",
+        "El método estático `getChildContext()`.",
+        "La propiedad de instancia `childContextTypes`.",
+        "La propiedad estática `childContextTypes`.",
+        "El método de instancia `getChildContextTypes()`.",
+        "El método estático `getChildContextTypes()`.",
+        "La propiedad de instancia `contextTypes`.",
+        "La propiedad estática `contextTypes`.",
+        "El método de instancia `getContextTypes()`.",
+        "El método estático `getContextTypes()`."
+      ],
+      "correct": [9],
+      "lesson": 7
+    },
+    {
+      "type": "input",
+      "question": "¿Qué paquete define el encaminador de *React*?",
+      "correct": "react-router",
+      "lesson": 8
+    },
+    {
+      "type": "multiselect",
+      "question": "Cuando se define una ruta compuesta, mediante un componente `<Route>`, ¿qué elementos hay que definir?",
+      "options": [
+        "Su punto de montaje, mediante la propiedad `path`.",
+        "Su vista envoltorio, mediante la propiedad `component`.",
+        "Su vista indice, mediante la propiedad `index`."
+      ],
+      "correct": [0, 1],
+      "postnote": "La vista índice se define mediante un componente `<IndexRoute>` en la sección de contenido de `<Route>`.",
+      "lesson": 8
+    },
+    {
+      "type": "multiselect",
+      "question": "Cuando se define una ruta simple, mediante un componente `<Route>`, ¿qué elementos hay que definir?",
+      "options": [
+        "Su path, mediante la propiedad `path`.",
+        "Su vista asociada, mediante la propiedad `component`.",
+        "Su vista indice, mediante la propiedad `index`."
+      ],
+      "correct": [0, 1],
+      "lesson": 8
+    },
+    {
+      "type": "confirm",
+      "question": "En una aplicación que usa *React Router*, ¿el componente raíz `RenderDOM.render(<App />, document.getElementById('react-app'))` sería correcto?",
+      "correct": false,
+      "postnote": "Hay que utilizar algo como `ReactDOM.render(<Router history={history}>{map}</Router>, document.getElementById('react-app'));`.",
+      "lesson": 8
+    },
+    {
+      "type": "input",
+      "question": "Supongamos que tenemos la ruta parametrizada `/usuario/:id`. ¿Mediante qué expresión *JavaScript* accederíamos al valor del parámetro `:id`?",
+      "correct": "this.props.params.id",
+      "lesson": 8
+    },
+    {
+      "type": "input",
+      "question": "¿A través de qué propiedad del contexto añadida por *React Router*, podemos realizar transiciones explícitas de una vista a otra?",
+      "prenote": "Por favor, indique la propiedad siguiente el formato `this.context.nombrePropiedad`.",
+      "correct": "this.context.router",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "A la hora de definir elementos `<a>` en una aplicación *React* que conllevan el cambio de vista, ¿qué componente de *React Router* hay que utilizar?",
+      "prenote": "Por favor, indique el elemento en formato `<Componente>`.",
+      "correct": "<Link>",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método del contexto de *React Router* hay que utilizar para transicionar de la vista actual a otra, explícitamente, registrándola en la historia de URLs?",
+      "prenote": "Por favor, indique el método como sigue `this.context.propiedad.método()`.",
+      "correct": "this.context.router.push()",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "Si una vista debe actualizar el título del documento, ¿a qué propiedad hay que asignarle el título?",
+      "prenote": "Por favor, indique la propiedad como `objeto.propiedad`.",
+      "correct": "document.title",
+      "lesson": 9
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cómo configuraría la historia de navegador en *React Router*?",
+      "options": [
+        "`<Router history='browser'></Router>`",
+        "`<Router history='browserHistory'></Router>`",
+        "`<Router history={browser}></Router>`",
+        "`<Router history={browserHistory}></Router>`",
+        "`<Router history={{browser}}></Router>`",
+        "`<Router history={{browserHistory}}></Router>`",
+        "`<Router><History type='browser'/></Router>`",
+        "`<Router><History type='browserHistory'/></Router>`",
+        "`<Router><History type={browser}/></Router>`",
+        "`<Router><History type={browserHistory}/></Router>`"
+      ],
+      "correct": [3],
+      "lesson": 9
+    },
+    {
+      "type": "select",
+      "question": "Cuando se utiliza la historia del navegador, ¿cómo son las rutas?",
+      "options": [
+        "/mi/componente/vista",
+        "/#/mi/componente/vista"
+      ],
+      "correct": 0,
+      "lesson": 9
+    },
+    {
+      "type": "multiselect",
+      "question": "Para definir el controlador de un evento en un componente, mediante qué sintaxis de nombre de atributo hay que hacerlo?",
+      "options": [
+        "`onevento`, por ejemplo, `onkey`.",
+        "`onEvento`, por ejemplo, `onKey`.",
+        "`OnEvento`, por ejemplo, `OnKey`.",
+        "`on-evento`, por ejemplo, `on-key`."
+      ],
+      "correct": [1],
+      "lesson": 10
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son las sobrecargas posibles de un controlador de eventos?",
+      "options": [
+        "`handleEvent()`",
+        "`handleEvent(e)`",
+        "`handleEvent(e, opts)`"
+      ],
+      "correct": [0, 1],
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "Cuando un controlador de eventos atiende los eventos `click` y `doubleClick` , ¿qué propiedad del objeto evento se puede consultar para saber ante cuál de ellos estamos?",
+      "correct": "type",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método del objeto evento hay que invocar para cancelar la ejecución de los controladores predeterminados?",
+      "prenote": "Por favor, use el siguiente formato `método()`.",
+      "correct": "preventDefault()",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método del objeto evento hay que invocar para cancelar la propagación del evento?",
+      "prenote": "Por favor, use el formato `método()`.",
+      "correct": "stopPropagation()",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué propiedad del objeto evento se accede al objeto evento nativo?",
+      "correct": "nativeEvent",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Qué evento marca un componente `<input>` como inteligente (*smart*)?",
+      "prenote": "Por favor, indique el nombre del evento, no del atributo con el que fijar el controlador. Comience el nombre con mayúscula.",
+      "correct": "Change",
+      "lesson": 11
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué convierte un componente HTML en uno controlado?",
+      "options": [
+        "La definición del atributo `value`.",
+        "La definición del atributo `defaultValue`.",
+        "La definición de un controlador para el evento `Change`.",
+        "El almacenamiento de su valor en el estado del componente padre, generalmente, un formulario.",
+        "El almacenamiento de su valor en el propio componente HTML."
+      ],
+      "correct": [0, 2, 3],
+      "lesson": 11
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué convierte un componente HTML en uno **no** controlado?",
+      "options": [
+        "La definición del atributo `value`.",
+        "La definición del atributo `defaultValue`.",
+        "La definición de un controlador para el evento `Change`.",
+        "El almacenamiento de su valor en el estado del componente padre, generalmente, un formulario.",
+        "El almacenamiento de su valor en el propio componente HTML."
+      ],
+      "correct": [1, 4],
+      "postnote": "Si es necesario, se puede definir controlador para el evento `Change`, pero no se tiene en cuenta a la hora de determinar si no está controlado.",
+      "lesson": 11
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Dónde se puede definir el controlador del evento `Change` de los componentes HTML?",
+      "options": [
+        "En el propio componente HTML mediante el atributo `Change`.",
+        "En el formulario HTML mediante el atributo `Change`.",
+        "En el propio componente HTML mediante el atributo `onchange`.",
+        "En el formulario HTML mediante el atributo `onchange`.",
+        "En el propio componente HTML mediante el atributo `onChange`.",
+        "En el formulario HTML mediante el atributo `onChange`.",
+        "En el propio componente HTML mediante el atributo `on-change`.",
+        "En el formulario HTML mediante el atributo `on-change`."
+      ],
+      "correct": [4, 5],
+      "lesson": 11
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué *plugins* de *ESLint* podemos aplicar reglas de análisis al código *JSX* y *React*?",
+      "options": [
+        "`eslint-jsx`",
+        "`eslint-plugin-jsx`",
+        "`eslint-react`",
+        "`eslint-plugin-react`",
+        "`eslint-reactjs`",
+        "`eslint-plugin-reactjs`"
+      ],
+      "correct": [3],
+      "lesson": 12
+    }
+  ]
+}
