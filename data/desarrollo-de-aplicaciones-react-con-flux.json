@@ -1,0 +1,305 @@
+{
+  "title": "Desarrollo de aplicaciones React con Flux",
+  "lang": "es",
+  "duration": 60,
+  "questions": [
+    {
+      "type": "select",
+      "question": "¿Qué es *Flux*?",
+      "options": [
+        "Una versión mejorada de *React*.",
+        "Una implementación particular de *React*.",
+        "Una arquitectura de software diseñada para el desarrollo de aplicaciones."
+      ],
+      "correct": 2,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del paquete, implementado por *Facebook*, en el que encontramos clases *JavaScript* relacionadas con *Flux*?",
+      "correct": "flux",
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "En una aplicación *React* desarrollada bajo *Flux*, ¿cuántos despachadores debe de tener la aplicación?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Uno por dominio de datos.",
+        "Tantos como sea necesario"
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es una acción?",
+      "options": [
+        "Un objeto que representa algo que debe ser procesado por los despachadores.",
+        "Un objeto que representa algo que debe ser procesado por los almacenes."
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Qué elemento de la aplicación debe crear el objeto acción?",
+      "options": [
+        "Un componente *React*.",
+        "Un despachador.",
+        "Un almacén.",
+        "Un creador de acciones."
+      ],
+      "correct": 3,
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué argumentos hay que pasar a un creador de acciones?",
+      "options": [
+        "El despachador al que hay que pasar la acción.",
+        "El tipo de acción a crear o generar.",
+        "Los datos asociados a la acción.",
+        "El almacén o los almacenes que deben atender la acción."
+      ],
+      "correct": [
+        2
+      ],
+      "postnote": "Cada creador de acción está asociado a un único tipo de acción, por lo que no hay que pasárselo, queda implícito en la acción que generará. Sólo hay que pasarle los datos asociados a la acción.",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿A qué elementos de la aplicación, un creador de acción le pasa un objeto acción?",
+      "options": [
+        "Al despachador.",
+        "A los almacenes.",
+        "A las propias acciones."
+      ],
+      "correct": [0],
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántos almacenes pueden atender o procesar una determinada acción?",
+      "options": [
+        "Uno solo.",
+        "Tantos como sea necesario."
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántos almacenes puede tener una aplicación implementada bajo *Flux*?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Tantos como sea necesario."
+      ],
+      "correct": 3,
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué elemento de una aplicación desarrollada bajo *Flux* es el encargado de acceder al contenedor de datos como, por ejemplo, una base de datos?",
+      "options": [
+        "La acción.",
+        "El creador de acción.",
+        "El despachador.",
+        "El controlador de acción.",
+        "El almacén.",
+        "El componente *React*."
+      ],
+      "correct": [4],
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Dónde se recomienda definir un controlador de acciones?",
+      "options": [
+        "En el despachador.",
+        "En el almacén que tiene asociado.",
+        "En una función aparte."
+      ],
+      "correct": 1,
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Qué elemento de la aplicación debe de registrar un controlador de acciones?",
+      "options": [
+        "El despachador.",
+        "El creador de acciones.",
+        "El almacén."
+      ],
+      "correct": 2,
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Qué elemento se recomienda para generar los eventos de cambio?",
+      "options": [
+        "El despachador.",
+        "El almacén.",
+        "La acción.",
+        "El creador de la acción.",
+        "El controlador de la acción."
+      ],
+      "correct": 4,
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles son las responsabilidades de los controladores de acciones?",
+      "options": [
+        "Generar acciones de almacenes.",
+        "Invocar operaciones de acceso a datos de los almacenes.",
+        "Notificar a los componentes *React* de cambios en los datos para que se los muestren a los usuarios."
+      ],
+      "correct": [1, 2],
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "Cuando se implementa un almacén mediante la clase `Store` del paquete `flux`, ¿cuál es el nombre del método en el que hay que implementar su controlador de acciones?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "__onDispatch()",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "Cuando se implementa un almacén mediante la clase `Store` del paquete `flux`, ¿qué método debemos invocar para generar un evento de cambio?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "__emitChange()",
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "En principio, cuando implementamos una operación de acceso de un almacén de manera **síncrona**, ¿qué parámetros debe definir?",
+      "options": [
+        "El objeto acción.",
+        "Los datos con los que trabajará la operación de acceso.",
+        "Una función de *callback*."
+      ],
+      "correct": [1],
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "En principio, cuando implementamos una operación de acceso de un almacén de manera **asíncrona**, ¿qué parámetros debe definir?",
+      "options": [
+        "El objeto acción.",
+        "Los datos con los que trabajará la operación de acceso.",
+        "Una función de *callback*."
+      ],
+      "correct": [1, 2],
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método hay que sobrescribir de la clase `Store` para saber si la última operación de acceso a datos realizó algún cambio en el origen de datos?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "hasChanged()",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿En qué directorio se definen los almacenes?",
+      "prenote": "Por favor, indíquelo como sigue `dir/subdir`.",
+      "correct": "app/stores",
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "Para cada clase almacén, en principio, ¿cuántas instancias debe de haber en la aplicación?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Tantas como sea necesario"
+      ],
+      "correct": 1
+    },
+    {
+      "type": "input",
+      "question": "Generalmente, en qué método del ciclo de vida de un componente *React* debe hacerse el acceso al almacén?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "componentDidMount()",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "Cuando un componente *React* registra su controlador de cambios, ¿mediante qué método de la clase `Store` debe hacerlo?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "addListener()",
+      "lesson": 4
+    },
+    {
+      "type": "select",
+      "question": "Una vez un componente *React* ha recibido del almacén sus datos, ¿cómo debe pasárselos?",
+      "options": [
+        "Creando un nuevo componente *React*.",
+        "Invocando su método `setState()` con el que solicitar una nueva reproducción del componente.",
+        "Generalmente, no debe hacer nada."
+      ],
+      "correct": 1,
+      "lesson": 4
+    },
+    {
+      "type": "confirm",
+      "question": "En una aplicación *React*, ¿es necesario añadir la dependencia *NPM* para poder usar la *API Fetch*?",
+      "correct": false,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué devuelve la función `fetch`?",
+      "options": [
+        "Un objeto respuesta.",
+        "Una promesa.",
+        "Nada."
+      ],
+      "correct": 1,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué tipo de acceso se lleva a cabo mediante `fetch()`?",
+      "options": [
+        "Síncrono.",
+        "Asíncrono."
+      ],
+      "correct": 1,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se envía una solicitud *HTTP POST* mediante `fetch()`?",
+      "options": [
+        "`fetch.post('/data/bands/insert', data)`",
+        "`fetch('/data/bands/insert', 'post', data)`",
+        "`fetch('/data/bands/insert', {method: 'post', body: JSON.stringify(data)})`"
+      ],
+      "correct": 2,
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método del objeto respuesta hay que usar para obtener los datos recibidos mediante `fetch()` en forma de un objeto *JavaScript*?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "json()",
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "¿Qué método del objeto respuesta hay que usar para obtener los datos recibidos mediante `fetch()` en forma de texto?",
+      "prenote": "Por favor, indíquelo en formato `nombre()`.",
+      "correct": "text()",
+      "lesson": 5
+    }
+  ]
+}
