@@ -1,0 +1,628 @@
+{
+  "title": "Fundamentos de Node.js",
+  "lang": "es",
+  "duration": 60,
+  "questions": [
+    {
+      "type": "multiselect",
+      "question": "¿Qué es *Node*?",
+      "options": [
+        "Una versión mejorada de *JavaScript*.",
+        "Una plataforma para el desarrollo de software con *JavaScript*."
+      ],
+      "correct": [1],
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es un módulo de sistema o integrado?",
+      "options": [
+        "Uno que viene de fábrica con *Node.js*.",
+        "Uno que hemos desarrollado para que vaya de fábrica con nuestra aplicación *Node*."
+      ],
+      "correct": 0,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "En un módulo, ¿qué contiene la variable `global`?",
+      "options": [
+        "Los objetos accesibles desde cualquier módulo de la aplicación.",
+        "Los objetos privados del módulo."
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "Cuando escribimos un módulo, ¿cómo exponemos los objetos que pueden utilizar los demás módulos de la aplicación?",
+      "options": [
+        "Mediante la función `exports()`.",
+        "Mediante la variable `exports` del módulo.",
+        "Mediante la propiedad `exports` de la variable `module` del módulo.",
+        "Mediante la función `export()`.",
+        "Mediante la sentencia `export` de *JavaScript*."
+      ],
+      "correct": [1, 2, 4],
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Qué variable privada del módulo podemos usar para conocer en qué directorio se encuentra el módulo actual, esto es, en el que nos encontramos?",
+      "correct": "__dirname",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Qué variable privada del módulo podemos usar para conocer el nombre del archivo *JavaScript* del módulo actual, o sea, en el que nos encontramos?",
+      "correct": "__filename",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cómo se importa un módulo para así poder utilizar su objeto API, es decir, sus elementos u objetos reutilizables?",
+      "options": [
+        "La función `require()`.",
+        "La sentencia `require` de *JavaScript*.",
+        "la función `import()`.",
+        "La sentencia `import` de *JavaScript*."
+      ],
+      "correct": [0, 3],
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "En una importación, si indicamos el módulo `fs`, ¿qué tipo de ruta estamos indicando?",
+      "options": [
+        "Una ruta absoluta.",
+        "Una ruta relativa.",
+        "Una ruta de búsqueda."
+      ],
+      "correct": 2,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "En una importación, si indicamos el módulo `./fs`, ¿qué tipo de ruta estamos indicando?",
+      "options": [
+        "Una ruta absoluta.",
+        "Una ruta relativa.",
+        "Una ruta de búsqueda."
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "En una importación, si indicamos el módulo `../lib/fs`, ¿qué tipo de ruta estamos indicando?",
+      "options": [
+        "Una ruta absoluta.",
+        "Una ruta relativa.",
+        "Una ruta de búsqueda."
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "Suponga que deseamos importar el módulo `m` del directorio actual, ¿qué ruta indicaría en la importación?",
+      "prenote": "Por favor, indique sólo la ruta, sin comillas ni la función o sentencia a usar.",
+      "correct": "./m",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "Suponga que deseamos importar el módulo `m` del directorio `dir` ubicado en el directorio padre al del módulo actual, ¿qué ruta indicaría en la importación?",
+      "prenote": "Por favor, indique sólo la ruta, sin comillas ni la función o sentencia a usar.",
+      "correct": "../dir/m",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Qué ruta utilizaría para importar el módulo de sistema `http`?",
+      "prenote": "Por favor, indique sólo la ruta, sin comillas ni la función o sentencia a usar.",
+      "correct": "http",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Qué propiedad hay que consultar para conocer el módulo principal?",
+      "prenote": "Por favor, indique la propiedad en formato `objeto.propiedad`.",
+      "correct": "require.main",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre de la variable de entorno en la que hay que indicar los directorios donde *Node* tiene que buscar los módulos y paquetes indicados, mediante rutas de búsqueda, en las importaciones?",
+      "prenote": "Por favor, indique sólo el nombre de la variable. Recuerde que se distingue entre minúsculas y mayúsculas.",
+      "correct": "NODE_PATH",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué es un paquete?",
+      "options": [
+        "Un componente de software reutilizable.",
+        "Un directorio de código JavaScript.",
+        "Un módulo muy grande."
+      ],
+      "correct": [0, 1],
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Dónde se publican los paquetes?",
+      "options": [
+        "En un directorio del disco.",
+        "En un servidor interno o externo a la organización."
+      ],
+      "correct": 1,
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cómo se conoce formalmente el lugar donde se publican los paquetes?",
+      "options": [
+        "Directorio",
+        "Índice de paquetes",
+        "Publicador",
+        "Registro",
+        "Repositorio"
+      ],
+      "correct": [3, 4],
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es el índice de paquetes?",
+      "options": [
+        "El lugar donde se publican los paquetes.",
+        "El catálogo de paquetes publicados."
+      ],
+      "correct": 1,
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué comando `npm` utilizaría para instalar `npm` en el directorio predeterminado?",
+      "prenote": "Por favor, indique la línea completa que usaría en su consola.",
+      "correct": "npm install -g npm",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué comando `npm` utilizaría para actualizar `npm`, instalado en el directorio predeterminado, a la última versión publicada?",
+      "correct": "npm update -g npm",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del archivo de configuración de usuario de `npm`?",
+      "prenote": "Por favor, indique sólo su nombre, no su ruta.",
+      "correct": ".npmrc",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de configuración se fija el repositorio que debe usar `npm`?",
+      "prenote": "Por favor, indique sólo el nombre del parámetro. Ejemplo: `edit`.",
+      "correct": "registry",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de configuración se fija el directorio predeterminado que debe usar `npm`?",
+      "prenote": "Por favor, indique su nombre.",
+      "correct": "prefix",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de configuración se fija el editor que debe usar `npm` para editarnos un archivo de configuración?",
+      "correct": "editor",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando de `npm` solicitaría que `npm` le editase el archivo de configuración de usuario?",
+      "prenote": "Por favor, indique la línea que introduciría en su consola.",
+      "correct": "npm config edit",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿En qué variable de entorno hay que indicar el directorio `bin` del directorio global de `npm`?",
+      "correct": "PATH",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿En qué variable de entorno hay que indicar el directorio raíz global?",
+      "correct": "NODE_PATH",
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es la caché de `npm`?",
+      "options": [
+        "El directorio donde se instalan los paquetes.",
+        "El directorio donde se descargan los paquetes.",
+        "Un búfer interno de `node` donde se cargan los paquetes importados por la aplicación."
+      ],
+      "correct": 1,
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando de `npm` comprobaría que tiene acceso al repositorio o registro?",
+      "prenote": "Por favor, proporcione la respuesta mediante el siguiente formato `npm comando`.",
+      "correct": "npm ping",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando `npm` consultaría de qué paquetes, instalados en el directorio predeterminado, tienen nuevas versiones en el repositorio?",
+      "prenote": "Por favor, indique sólo el nombre del comando `npm` sin `npm`. Ejemplo: `install`.",
+      "correct": "outdated",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del parámetro de configuración que indica la ubicación de la caché de `npm`?",
+      "correct": "cache",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre de la variable de entorno mediante la cual se fija el entorno de ejecución de la aplicación: `production` o `development`?",
+      "correct": "NODE_ENV",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando `npm` instalaría el paquete `lodash` localmente al proyecto, sin modificar el archivo `package.json`?",
+      "correct": "npm install lodash",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando `npm` instalaría la versión `1.2.3` del paquete `lodash` localmente al proyecto, sin modificar el archivo `package.json`?",
+      "correct": "npm install lodash@1.2.3",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Qué opción utilizaría en `npm` para instalar un paquete localmente y añadirlo al archivo `package.json` como dependencia de producción?",
+      "prenote": "Por favor, indique sólo la opción. Ejemplo: `-g`",
+      "correct": "--save",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "Por convenio, ¿cuál es el módulo *JavaScript* en el que se define la API de un paquete?",
+      "prenote": "Por favor, indique el nombre del archivo y la extensión. Ejemplo: `archivo.ext`.",
+      "correct": "index.js",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre de la propiedad del archivo `package.json` que indica el módulo principal del paquete?",
+      "correct": "main",
+      "lesson": 4
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cuáles de los siguientes nombres de paquete son válidos?",
+      "options": [
+        "ámbito/paquete",
+        "@ámbito/paquete",
+        "paquete",
+        "@abc/def",
+        "@ámbito.paquete",
+        "@abc.def"
+      ],
+      "correct": [1, 2, 3],
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué propiedad se puede acceder a los argumentos pasados a una aplicación *Node*?",
+      "prenote": "Por favor, indique la respuesta en formato `objeto.propiedad`.",
+      "correct": "process.argv",
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "¿Cómo consultaría la variable de entorno XYZ en un paquete *Node*?",
+      "prenote": "Por favor, indique la respuesta como sigue: `objeto.propiedad.propiedad`.",
+      "correct": "process.env.XYZ",
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué propiedad utilizaría, en un paquete *Node*, para consultar la versión del motor *V8* que usa `node`?",
+      "options": [
+        "version",
+        "process.version",
+        "versions",
+        "process.versions"
+      ],
+      "correct": 3,
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "Suponga que dispone del *script* `hola` en la propiedad `scripts` del archivo `package.json`, ¿cómo lo invocaría mediante `npm`?",
+      "prenote": "Por favor, indique el comando `npm` que usaría. Ejemplo: `npm install`.",
+      "correct": "npm run hola",
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "Suponga que desea invocar el *script* `test` definido en la propiedad `scripts` del archivo `package.json`, ¿cómo lo invocaría pasándole como argumentos los valores 1 y 2?",
+      "prenote": "Por favor, indique el comando `npm` que usaría. Ejemplo: `npm uninstall`.",
+      "correct": "npm test -- 1 2",
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando de `npm` se puede consultar el directorio donde se instalan los archivos indicados en la propiedad `bin` del archivo `package.json`?",
+      "prenote": "Por favor, indique el comando `npm` que usaría, teniendo en cuenta que se debe consultar la configuración global.",
+      "correct": "npm bin -g",
+      "lesson": 5
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede definir un paquete como biblioteca y aplicación al mismo tiempo?",
+      "correct": true,
+      "postnote": "Mediante la propiedad `bin` de `package.json` indicaremos la aplicación. Mientras que con la propiedad `main`, el módulo principal del paquete si se importa para su reutilización.",
+      "lesson": 5
+    },
+    {
+      "type": "confirm",
+      "question": "¿Es necesario tener abierta una sesión con el repositorio para poder publicar en él?",
+      "correct": true,
+      "lesson": 6
+    },
+    {
+      "type": "input",
+      "question": "¿Qué comando `npm` utilizaría para abrir una sesión con el respositorio de *NPM*?",
+      "prenote": "Por favor, indique el comando completo. Ejemplo: `npm install`.",
+      "correct": "npm login",
+      "lesson": 6
+    },
+    {
+      "type": "input",
+      "question": "¿Qué comando `npm` utilizaría para cerrar la sesión abierta con el repositorio *NPM*?",
+      "prenote": "Por favor, indique el comando completo. Ejemplo: `npm install`.",
+      "correct": "npm logout",
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "Suponga que ha generado el paquete final a publicar en el directorio `dist/nodejs`, ¿qué comando utilizaría para publicarlo en el repositorio?",
+      "options": [
+        "npm pub dist",
+        "npm publish dist",
+        "npm pub dist/nodejs",
+        "npm publish dist/nodejs"
+      ],
+      "correct": 3,
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿Qué comando `npm` utilizaría para saber el usuario con el que tiene abierta la sesión al repositorio NPM?",
+      "options": [
+        "npm who",
+        "npm whoiam",
+        "npm whoami",
+        "npm which"
+      ],
+      "correct": 2,
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántas etiquetas puede tener asociada una versión de un paquete en el repositorio de NPM?",
+      "options": [
+        "Cero",
+        "Una",
+        "Dos",
+        "Tantas como sea necesario"
+      ],
+      "correct": 3,
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿A cuántas versiones puede referenciar una etiqueta de un paquete publicado en NPM?",
+      "options": [
+        "Cero",
+        "Una",
+        "Dos",
+        "Tantas como sea necesario"
+      ],
+      "correct": 1,
+      "lesson": 6
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede sobrescribir una publicación realizada por error?",
+      "correct": false,
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿Cuándo ejecuta `node` la proposición que sigue a una invocación de función asíncrona?",
+      "options": [
+        "Cuando finaliza la operación de E/S, esperando a que termine.",
+        "Tras solicitar al sistema operativo la operación de E/S, sin esperar a que termine."
+      ],
+      "correct": 1,
+      "lesson": 7
+    },
+    {
+      "type": "select",
+      "question": "Cuando invocamos una función asíncrona que devuelve un dato, ¿dónde debemos indicar el código que trabaja con ese dato?",
+      "options": [
+        "En la proposición que sigue a la invocación de la función asíncrona.",
+        "En el cuerpo de la función *callback* que se pasa a la función asíncrona en su invocación."
+      ],
+      "correct": 1,
+      "lesson": 7
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo actúa `node` cuando una operación de E/S ha terminado?",
+      "options": [
+        "Invoca inmediatamente la función *callback* que se adjuntó en la función asíncrona.",
+        "Se espera a que la línea actual en ejecución finalice y ejecuta la función *callback*.",
+        "Encola la función *callback* y espera a finalizar lo que está ejecutando para ir a la cola y coger su siguiente bloque de código a ejecutar."
+      ],
+      "correct": 2,
+      "lesson": 7
+    },
+    {
+      "type": "select",
+      "question": "¿Cuál es la signatura de las funciones de *callback*?",
+      "options": [
+        "`function(error, data)`.",
+        "Depende de la función asíncrona que solicita la operación de E/S."
+      ],
+      "correct": 1,
+      "lesson": 7
+    },
+    {
+      "type": "select",
+      "question": "¿La función `readFile()` del módulo integrado `fs` es síncrona o asíncrona?",
+      "options": [
+        "Síncrona",
+        "Asíncrona"
+      ],
+      "correct": 1,
+      "lesson": 8
+    },
+    {
+      "type": "select",
+      "question": "¿Qué propiedad consultaría si desea conocer el separador usado en el sistema de ficheros del sistema operativo donde se está ejecutando `node`?",
+      "options": [
+        "`path.sep`",
+        "`path.separator`"
+      ],
+      "correct": 0,
+      "lesson": 9
+    },
+    {
+      "type": "select",
+      "question": "¿Qué función utilizaría si desea obtener el nombre de un archivo a partir de su ruta?",
+      "options": [
+        "`path.basename()`",
+        "`path.entryname()`",
+        "`path.filename()`"
+      ],
+      "correct": 0,
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "¿Qué función del módulo `path` utilizaría para obtener la extensión de un archivo a partir de su nombre o ruta?",
+      "prenote": "Por favor, indique la función como sigue: `path.función()`.",
+      "correct": "path.extname()",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "¿Qué función del módulo `path` utilizaría para obtener el directorio padre de una ruta dada?",
+      "prenote": "Por favor, indique la función como sigue: `path.función()`.",
+      "correct": "path.dirname()",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "¿Qué función del módulo `path` utilizaría para obtener una ruta a partir de sus partes?",
+      "prenote": "Por favor, indique la función como sigue: `path.función()`.",
+      "correct": "path.join()",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "¿Qué función del módulo `path` utilizaría para obtener una ruta que resuelve los elementos `.` y `..` y suprime los duplicados del separado?",
+      "prenote": "Por favor, indique la función como sigue: `path.función()`.",
+      "correct": "path.normalize()",
+      "lesson": 9
+    },
+    {
+      "type": "input",
+      "question": "Si estamos desarrollando un paquete bajo el modelo de eventos, ¿qué clase debe heredar un emisor de eventos?",
+      "prenote": "Por favor, indique la clase en formato `módulo.Clase`.",
+      "correct": "events.EventEmitter",
+      "lesson": 10
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante que métodos se registra controladores de eventos en un emisor de eventos?",
+      "options": [
+        "`on()`",
+        "`once()`",
+        "`handle()`",
+        "`handler()`"
+      ],
+      "correct": [0, 1],
+      "lesson": 10
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se ejecutan los controladores de eventos cuando se generan eventos?",
+      "options": [
+        "Síncronamente",
+        "Asíncronamente"
+      ],
+      "correct": 0,
+      "lesson": 10
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede pasar datos a los controladores de un evento cuando se genera el evento?",
+      "correct": true,
+      "lesson": 10
+    },
+    {
+      "type": "select",
+      "question": "¿Cuántos controladores, como máximo, se puede registrar, en un emisor, para un mismo evento?",
+      "options": [
+        "Uno solo.",
+        "Dos.",
+        "Tantos como sea necesario."
+      ],
+      "correct": 2,
+      "lesson": 10
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede registrar controladores para un evento que el emisor no conoce?",
+      "correct": true,
+      "lesson": 10
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué opciones de `node` hay que usar para depurar un módulo?",
+      "options": [
+        "`--debug`",
+        "`--debugger`",
+        "`--debug-brk`",
+        "`--debug-break`",
+        "`--inspect`",
+        "`--inspector`"
+      ],
+      "correct": [2, 4],
+      "lesson": 11
+    },
+    {
+      "type": "confirm",
+      "question": "¿Un archivo oculto (o *blackbox script*) es ejecutado?",
+      "correct": true,
+      "lesson": 11
+    }
+  ]
+}
