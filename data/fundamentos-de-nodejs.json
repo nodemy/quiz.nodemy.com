@@ -623,6 +623,73 @@
       "question": "¿Un archivo oculto (o *blackbox script*) es ejecutado?",
       "correct": true,
       "lesson": 11
+    },
+    {
+      "type": "confirm",
+      "question": "¿Una promesa es una manera de lidiar con la ejecución asíncrona?",
+      "correct": true,
+      "lesson": 12
+    },
+    {
+      "type": "confirm",
+      "question": "¿Las promesas son específicas de Node?",
+      "correct": false,
+      "lesson": 12
+    },
+    {
+      "type": "input",
+      "question": "¿Cuántos estados tiene el ciclo de vida de una promesa?",
+      "correct": "3",
+      "lesson": 12
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué tipo de controladores de estado tienen las promesas?",
+      "options": [
+        "Controlador pendiente.",
+        "Controlador de éxito.",
+        "Controlador de error o fallo."
+      ],
+      "correct": [1, 2],
+      "lesson": 12
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué métodos de una promesa se puede registrar un controlador de fallo?",
+      "options": [
+        "`catch()`",
+        "`then()`"
+      ],
+      "correct": [0, 1],
+      "lesson": 12
+    },
+    {
+      "type": "select",
+      "question": "¿Quién decide la signatura de los controladores de estado de las promesas?",
+      "options": [
+        "JavaScript en su especificación.",
+        "Las promesas.",
+        "Los creadores de las promesas, generalmente, las operaciones asíncronas."
+      ],
+      "correct": 2,
+      "lesson": 12
+    },
+    {
+      "type": "select",
+      "question": "Cuando definimos una promesa, ¿qué parámetros recibe el ejecutor?",
+      "options": [
+        "Una función con la que indicar el estado en que terminó la promesa.",
+        "Dos funciones con las que indicar el estado en que terminó la promesa y los parámetros a pasar a los controladores de estado.",
+        "Nada."
+      ],
+      "correct": 1,
+      "lesson": 12
+    },
+    {
+      "type": "confirm",
+      "question": "Cuando tenemos una cadena de promesas, ¿los parámetros de los controladores de estado son siempre los devueltos por la operación asíncrona origen?",
+      "correct": false,
+      "lesson": 12
     }
   ]
 }
