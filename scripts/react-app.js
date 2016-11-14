@@ -445,7 +445,7 @@ var InputQuestion = function (_React$Component) {
             null,
             _react2.default.createElement("input", { type: "text", value: state.value, onChange: function onChange(evt) {
                 return _this2.handleChange(evt);
-              }, placeholder: "Tu respuesta", size: "50" })
+              }, placeholder: "Respuesta", size: "50" })
           )
         );
       } else {

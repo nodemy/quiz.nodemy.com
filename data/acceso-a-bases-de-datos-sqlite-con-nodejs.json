@@ -1,0 +1,211 @@
+{
+  "title": "Acceso a bases de datos SQLite con Node.js",
+  "lang": "es",
+  "duration": 30,
+  "questions": [
+    {
+      "type": "select",
+      "question": "¿Qué es un *driver* nativo?",
+      "options": [
+        "Aquel que se encuentra escrito en JavaScript.",
+        "Aquel que se encuentra escrito en JavaScript y C/C++."
+      ],
+      "correct": 1,
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Qué es un *driver* puro?",
+      "options": [
+        "Aquel que se encuentra escrito en JavaScript.",
+        "Aquel que se encuentra escrito en JavaScript y C/C++."
+      ],
+      "correct": 0,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el *driver* de facto para SQLite?",
+      "prenote": "Por favor, indique el nombre del paquete NPM.",
+      "correct": "sqlite3",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Cómo abrirías una conexión a la base de datos `archivo.db`?",
+      "prenote": "Por favor, indica la proposición siguiendo las siguientes pautas: el objeto debe asignarse a la variable `db`; el driver se importó como `sqlite`; el nombre del archivo se debe indicar como una cadena literal entre comillas dobles suponiendo que se encuentra en el directorio `data/`; no hay que indicar función *callback* ni modo de apertura; no indique espacios más que cuando sea necesario; no finalice la proposición en punto y coma. Ejemplo: `db=lo-que-sea`",
+      "correct": "db=new sqlite.Database(\"data/archivo.db\")",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre de la propiedad que hay que consultar para saber si la conexión está abierta o cerrada?",
+      "prenote": "Por favor, indique sólo el nombre de la propiedad. Ejemplo: `filename`.",
+      "correct": "open",
+      "lesson": 1
+    },
+    {
+      "type": "multiselect",
+      "question": "Cuando no se indica el modo de apertura de la conexión, ¿cómo se abre?",
+      "prenote": "Asuma que el *driver* se ha importado como `sqlite`.",
+      "options": [
+        "`sqlite.OPEN_CREATE`",
+        "`sqlite.OPEN_READONLY`",
+        "`sqlite.OPEN_READWRITE`"
+      ],
+      "correct": [0, 2],
+      "lesson": 1
+    },
+    {
+      "type": "confirm",
+      "question": "¿La clase `Database` es emisora de eventos?",
+      "correct": true,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método de instancia de la clase `Database` se puede configurar la opción `busyTimeout`?",
+      "prenote": "Por favor, indique el nombre en formato `método()`.",
+      "correct": "configure()",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método se cierra una conexión?",
+      "prenote": "Por favor, indique el nombre en formato `método()`.",
+      "correct": "close()",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método de la clase `Database` ejecutaría un comando `CREATE TABLE`?",
+      "prenote": "Por favor, indique el nombre en formato `método()`.",
+      "correct": "run()",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método de la clase `Database` ejecutaría un comando `INSERT`, `UPDATE` o `DELETE`?",
+      "prenote": "Por favor, indique el nombre en formato `método()`.",
+      "correct": "run()",
+      "lesson": 1
+    },
+    {
+      "type": "confirm",
+      "question": "Si se va a ejecutar muchas veces un mismo comando, con parámetros distintos, ¿presenta mejor rendimiento una consulta preparada?",
+      "correct": true,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método de la clase `Database` se obtiene una consulta o sentencia preparada?",
+      "prenote": "Por favor, indique el nombre del método como sigue `método()`.",
+      "correct": "prepare()",
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el marcador de parámetros posicionales usado por el driver `sqlite3`?",
+      "correct": "?",
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "Suponiendo que `db` representa una conexión a una base de datos SQLite y `cmd` una sentencia preparada, ¿cuál de las siguientes proposiciones es la correcta para ejecutar la sentencia preparada?",
+      "options": [
+        "`db.run(cmd, [1, 2, 3])`",
+        "`cmd.run(db, [1, 2, 3])`",
+        "`cmd.run([1, 2, 3])`"
+      ],
+      "correct": 2,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método se cierra una sentencia preparada con objeto de liberar sus recursos?",
+      "prenote": "Por favor, indíquelo en formato `método()`.",
+      "correct": "finalize()",
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se marca el inicio de una transacción explícita?",
+      "options": [
+        "`tran = db.begin()`",
+        "`tran = db.transaction()`",
+        "`db.run(\"BEGIN\")`"
+      ],
+      "correct": 2,
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se confirma una transacción explícita?",
+      "options": [
+        "`tran.commit()`",
+        "`tran.end()`",
+        "`db.run(\"COMMIT\")`"
+      ],
+      "correct": 2,
+      "lesson": 1
+    },
+    {
+      "type": "confirm",
+      "question": "Si durante la ejecución de una transacción explícita se produce un error en, por ejemplo, un comando `INSERT`, ¿se ejecuta un `ROLLBACK` automáticamente?",
+      "correct": false,
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Como máximo, cuántas transacciones activas puede haber al mismo tiempo?",
+      "options": [
+        "Una.",
+        "Tantas como sea necesario.",
+        "Tantas como indique la opción de configuración `max_transactions`."
+      ],
+      "correct": 0,
+      "lesson": 1
+    },
+    {
+      "type": "input",
+      "question": "¿Qué nombre de archivo hay que indicar para abrir y crear una base de datos en memoria?",
+      "correct": ":memory:",
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "Como máximo, ¿cuántas conexiones puede tener abiertas una base de datos en memoria?",
+      "options": [
+        "Una.",
+        "Tantas como sea necesario.",
+        "Tantas como indique la opción de configuración `max_memory_dbs`."
+      ],
+      "correct": 0,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se registra una conexión en la caché de conexiones?",
+      "prenote": "Suponga que el *driver* se importó como `sqlite`.",
+      "options": [
+        "`db = new sqlite.Database('arch.db', {cached: true})`",
+        "`db = new sqlite.cache.Database('arch.db')`",
+        "`db = new sqlite.cached.Database('arch.db')`"
+      ],
+      "correct": 2,
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Cómo se solicita una conexión cacheada a la caché de conexiones?",
+      "prenote": "Suponga que el *driver* se importó como `sqlite`.",
+      "options": [
+        "`db = sqlite.cache['arch.db']`",
+        "`db = sqlite.cached['arch.db']`",
+        "`db = new sqlite.cached.Database('arch.db')`"
+      ],
+      "correct": 2,
+      "lesson": 2
+    }
+  ]
+}
