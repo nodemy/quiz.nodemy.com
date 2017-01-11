@@ -1,0 +1,546 @@
+{
+  "title": "Aprende bases de datos NoSQL con ArangoDB",
+  "lang": "es",
+  "duration": 60,
+  "questions": [
+    {
+      "type": "select",
+      "question": "¿En qué proceso se ejecuta un sistema de gestión de bases de datos implementado mediante una biblioteca?",
+      "options": [
+        "En el proceso de la aplicación que lo usa.",
+        "En el proceso específico del SGBD."
+      ],
+      "correct": 0,
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿En qué proceso se ejecuta un sistema de gestión de bases de datos implementado mediante una arquitectura cliente/servidor?",
+      "options": [
+        "En el proceso de la aplicación que lo usa.",
+        "En el proceso específico del SGBD."
+      ],
+      "correct": 1,
+      "lesson": 1
+    },
+    {
+      "type": "select",
+      "question": "¿Qué medio utiliza una aplicación para acceder a una instancia de bases de datos?",
+      "options": [
+        "Un *driver*.",
+        "Un *shell*.",
+        "Una interfaz web."
+      ],
+      "correct": 0
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué modelos soporta **ArangoDB**.",
+      "options": [
+        "Almacén clave-valor (*key-value store*).",
+        "Almacén de documentos (*document store*).",
+        "Almacén de grafos (*graph store*).",
+        "Almacén temporal (*time series store*)."
+      ],
+      "correct": [0, 1, 2],
+      "lesson": 1
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué tipo de esquema soporta **ArangoDB**?",
+      "options": [
+        "Esquema estático o estricto.",
+        "Esquema dinámico o flexible."
+      ],
+      "correct": [1]
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre, usado por convenio y buenas prácticas, del archivo de configuración de una instancia **ArangoDB**?",
+      "prenote": "Indique su nombre y su extensión, no su ruta.",
+      "correct": "arangod.conf",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de configuración se indica un extremo de conexión?",
+      "prenote": "Indique su nombre usando el siguiente formato: `sección.nombre`.",
+      "correct": "server.endpoint",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿En una configuración de instancia, qué valor asignaría a un extremo de conexión para que escuche mediante TCP en todas las interfaces de red en el puerto 8529?",
+      "prenote": "Indique sólo el valor del parámetro, sin indicar el nombre del parámetro.",
+      "correct": "tcp://0.0.0.0:8529",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué opción del comando `arangod` se indica el archivo PID?",
+      "prenote": "Indique la opción siguiendo el siguiente formato: `--nombre`.",
+      "correct": "--pid-file",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de configuración se indica el directorio de datos de la instancia?",
+      "prenote": "Indique el parámetro siguiendo el siguiente formato: `sección.nombre`.",
+      "correct": "database.directory",
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro se indica el archivo del registro de mensajes o eventos de la instancia?",
+      "prenote": "Indique el parámetro siguiendo el siguiente formato: `sección.nombre`.",
+      "correct": "log.file",
+      "lesson": 2
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué operaciones es necesario realizar para rotar el registro de mensajes o eventos de la instancia?",
+      "options": [
+        "Enviar la señal -9 al proceso `arangod`.",
+        "Enviar la señal SIGHUP al proceso `arangod`.",
+        "Copiar el archivo del registro."
+      ],
+      "correct": [1, 2],
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿En qué momento del día se recomienda realizar la rotación y el purgado del registro de eventos de la instancia?",
+      "options": [
+        "A mediodía.",
+        "A medianoche.",
+        "En el momento de menor carga."
+      ],
+      "correct": 2,
+      "lesson": 2
+    },
+    {
+      "type": "confirm",
+      "question": "¿Para conectar a una instancia, por ejemplo mediante `arangosh` o un *driver*, es necesario conectar a una base de datos?",
+      "correct": true,
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del archivo que, si existe, ejecutará automáticamente `arangosh`?",
+      "correct": ".arangosh.rc",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué función se puede utilizar, en `arangosh`, para mostrar un mensaje por la consola?",
+      "prenote": "Indique el nombre siguiendo el siguiente formato: `nombre()`.",
+      "correct": "print()",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué opción de `arangosh` se puede ejecutar un *script* de **JavaScript**?",
+      "prenote": "Indique la opción siguiendo el siguiente formato: `--sección.nombre`.",
+      "correct": "--javascript.execute",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el módulo de `arangosh` que contiene las funciones para administrar los usuarios de una instancia?",
+      "correct": "@arangodb/users",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del módulo de usuarios se puede comprobar el nombre de usuario y su contraseña?",
+      "prenote": "Indique la función siguiendo el siguiente formato: `nombre()`.",
+      "correct": "isValid()",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del módulo de usuarios se puede acceder al documento de un determinado usuario?",
+      "prenote": "Indique la función siguiendo el siguiente formato: `nombre()`.",
+      "correct": "document()",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del módulo de usuarios cambiaría la contraseña de un usuario?",
+      "prenote": "Indique la función siguiendo el siguiente formato: `nombre()`.",
+      "correct": "update()",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre de la base de datos de sistema de una instancia?",
+      "correct": "_system",
+      "lesson": 5
+    },
+    {
+      "type": "input",
+      "question": "¿A qué base de datos hay que estar conectado para crear una nueva base de datos?",
+      "correct": "_system",
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué método hay que utilizar para crear una base de datos?",
+      "options": [
+        "`db._createDatabase()`",
+        "`db.createDatabase()`",
+        "`db._create()`",
+        "`db.create()`"
+      ],
+      "correct": 0,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué método hay que utilizar para cambiar la base de datos activa de una sesión del *shell*?",
+      "options": [
+        "`db._useDatabase()`",
+        "`db.useDatabase()`",
+        "`db._use()`",
+        "`db.use()`"
+      ],
+      "correct": 0,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué utilizaría para conceder o revocar un permiso a un usuario?",
+      "options": [
+        "El módulo de usuarios.",
+        "El objeto `db`."
+      ],
+      "correct": 0,
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Mediante qué método crearía una nueva colección de documentos?",
+      "options": [
+        "db.create()",
+        "db._create()",
+        "db.createCollection()",
+        "db._createCollection()"
+      ],
+      "correct": 1,
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Cómo accedería al objeto de la colección `bands`?",
+      "options": [
+        "`db.bands`",
+        "`db.[\"bands\"]`",
+        "`db.collection(\"bands\")`",
+        "`db._collection(\"bands\")`"
+      ],
+      "correct": [0, 1, 3],
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "¿En qué formato se almacenan los documentos de una colección?",
+      "options": [
+        "BSON",
+        "JSON",
+        "XML"
+      ],
+      "correct": 1,
+      "lesson": 6
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué campos son claves en un documento?",
+      "options": [
+        "id",
+        "_id",
+        "key",
+        "_key",
+        "pk",
+        "_pk",
+        "rev",
+        "_rev"
+      ],
+      "correct": [1, 3],
+      "lesson": 6
+    },
+    {
+      "type": "confirm",
+      "question": "¿Es posible indicar el valor de la clave principal de un nuevo documento?",
+      "correct": true,
+      "lesson": 7
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué se puede usar para añadir un nuevo documento a una colección?",
+      "options": [
+        "`db.colección.add()`",
+        "`db.colección.insert()`",
+        "`db.colección.new()`",
+        "`db.colección.save()`"
+      ],
+      "correct": [1, 3],
+      "lesson": 7
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué método puede ejecutarse una consulta **AQL**?",
+      "options": [
+        "`db.query()`",
+        "`db._query()`",
+        "`db.colección.query()`",
+        "`db.colección._query()`"
+      ],
+      "correct": [1],
+      "lesson": 7
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede ejecutar consultas dinámicas **AQL**?",
+      "correct": true,
+      "lesson": 7
+    },
+    {
+      "type": "select",
+      "question": "¿Qué comando de una consulta **AQL** extrae documentos de una colección?",
+      "options": [
+        "`FILTER`",
+        "`FOR`",
+        "`RETURN`",
+        "`SELECT`",
+        "`SORT`"
+      ],
+      "correct": 1,
+      "lesson": 8
+    },
+    {
+      "type": "select",
+      "question": "¿Qué comando de una consulta **AQL** proyecta o determina el esquema de los documentos que forman el resultado?",
+      "options": [
+        "`FILTER`",
+        "`FOR`",
+        "`RETURN`",
+        "`SELECT`",
+        "`SORT`"
+      ],
+      "correct": 2,
+      "lesson": 8
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método, del *shell*, se puede acceder a un documento mediante su clave principal?",
+      "prenote": "Indique el nombre siguiendo el siguiente formato: `nombre()`.",
+      "correct": "document()",
+      "lesson": 8
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función **AQL** se puede acceder a un documento mediante su clave principal?",
+      "prenote": "Indique el nombre siguiendo el siguiente formato: `nombre()`.",
+      "correct": "document()",
+      "lesson": 8
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método del *shell* se puede comprobar si existe un documento con una determinada clave principal?",
+      "prenote": "Indique el nombre siguiendo el siguiente formato: `nombre()`.",
+      "correct": "exists()",
+      "lesson": 8
+    },
+    {
+      "type": "confirm",
+      "question": "¿Una vez insertado un documento, se puede modificar alguno de sus campos claves?",
+      "correct": false,
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando **AQL** reemplazaría un documento por otro?",
+      "prenote": "Indique el nombre del comando en mayúsculas, por ejemplo, `FOR`.",
+      "correct": "REPLACE",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué comando **AQL** cambiaría o añadiría nuevos campos a un documento existente?",
+      "prenote": "Indique el nombre del comando en mayúsculas, por ejemplo, `FOR`.",
+      "correct": "UPDATE",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿En un comando `INSERT` de **AQL**, cuál es el nombre de la variable predefinida que contiene el documento insertado para su uso en el comando `RETURN`?",
+      "correct": "NEW",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿En un comando de actualización de **AQL**, cuál es el nombre de la variable predefinida que contiene el documento tras la modificación para su uso en el comando `RETURN`?",
+      "correct": "NEW",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿En el *shell*, mediante qué método se puede modificar varios documentos mediante campos no claves?",
+      "prenote": "Indique el nombre del método siguiendo el siguiente formato: `nombre()`.",
+      "correct": "updateByExample()",
+      "lesson": 10
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué utilizaría, en **AQL**, para suprimir uno o más documentos?",
+      "options": [
+        "El comando `DELETE`.",
+        "El comando `REMOVE`",
+        "El comando `TRUNCATE`"
+      ],
+      "correct": [1],
+      "lesson": 11
+    },
+    {
+      "type": "input",
+      "question": "¿En un comando de supresión de **AQL**, cuál es el nombre de la variable predefinida que contiene el documento suprimido para su uso en el comando `RETURN`?",
+      "correct": "OLD",
+      "lesson": 11
+    },
+    {
+      "type": "input",
+      "question": "¿En el *shell*, mediante qué método se puede suprimir varios documentos mediante campos no claves?",
+      "prenote": "Indique el nombre del método siguiendo el siguiente formato: `nombre()`.",
+      "correct": "removeByExample()",
+      "lesson": 10
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué módulo del *shell* se puede registrar nuevas funciones **AQL** en una base de datos?",
+      "correct": "@arangodb/aql/functions",
+      "lesson": 13
+    },
+    {
+      "type": "confirm",
+      "question": "¿Un comando `FOR` de **AQL** puede extraer documentos de dos colecciones?",
+      "correct": false,
+      "postnote": "El comando `FOR` sólo puede extraer documentos de una única colección. Pero una consulta puede tener varios `FOR`s.",
+      "lesson": 14
+    },
+    {
+      "type": "select",
+      "question": "¿En una consulta multicolección, qué comando hay que utilizar para reunir documentos?",
+      "prenote": "Para simular el `INNER JOIN` de **SQL**.",
+      "options": [
+        "`FILTER`",
+        "`FOR`",
+        "`RETURN`"
+      ],
+      "correct": 0,
+      "lesson": 14
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede asignar el resultado de una subconsulta a un comando `LET` en **AQL**?",
+      "correct": true,
+      "lesson": 14
+    },
+    {
+      "type": "select",
+      "question": "¿Generalmente, qué es mejor?",
+      "options": [
+        "El escaneo de colección.",
+        "El escaneo de índice."
+      ],
+      "correct": 1,
+      "lesson": 15
+    },
+    {
+      "type": "confirm",
+      "question": "¿Es posible que el motor devuelva un resultado consultando únicamente uno o más índices, sin necesidad de acceder directamente a los documentos?",
+      "correct": true,
+      "postnote": "Es posible si *todos* los campos proyectados y usados por la consulta se encuentran en los índices. Estas consultas se conocen formalmente como **consultas cubiertas por índice**.",
+      "lesson": 15
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede suprimir un índice principal o primario?",
+      "correct": false,
+      "postnote": "Los índices principales los crea automáticamente la instancia cuando crea las colecciones y se suprimen cuando se suprime la colección. No es posible suprimir un índice principal sin suprimir su colección asociada.",
+      "lesson": 15
+    },
+    {
+      "type": "multiselect",
+      "question": "Suponga que tiene creado un índice y comprueba que lo tiene fragmento. ¿Cuáles de las siguientes operaciones ejecutaría para reconstruirlo?",
+      "options": [
+        "Crear el índice.",
+        "Reorganizar el índice.",
+        "Suprimir el índice."
+      ],
+      "correct": [0, 2],
+      "lesson": 15
+    },
+    {
+      "type": "confirm",
+      "question": "¿Cuando se indexa una colección, se indexan siempre todos sus documentos?",
+      "correct": false,
+      "lesson": 15
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué contiene una entrada de índice?",
+      "options": [
+        "El valor de la clave de indexación del documento asociado a la entrada.",
+        "El documento asociado a la entrada.",
+        "El localizador del documento asociado a la entrada."
+      ],
+      "correct": [0, 2],
+      "lesson": 15
+    },
+    {
+      "type": "confirm",
+      "question": "Supongamos que tenemos un índice de *hash*, ¿se puede usar para acceder más rápidamente a los documentos en una consulta que compara el valor de la clave de indexación mediante el operador `<=`?",
+      "correct": false,
+      "postnote": "Los índices de *hash* sólo se pueden usar si se compara mediante `==` y se compara todos los valores que forman la clave de indexación.",
+      "lesson": 16
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede crear un índice secundario cuya clave de indexación contiene el campo clave de los documentos?",
+      "correct": true,
+      "lesson": 16
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué método se ejecuta una transacción en el *shell*?",
+      "prenote": "Indique el nombre en formato `nombre()`.",
+      "correct": "_executeTransaction()",
+      "lesson": 17
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede ejecutar comandos **AQL** en una transacción?",
+      "correct": true,
+      "lesson": 17
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se recomienda que la función de transacción `action` use variables definidas en su *closure*?",
+      "correct": false,
+      "postnote": "Cualquier dato que no se encuentre disponible en la transacción mediante una variable local, se debe pasar mediante la propiedad `params`.",
+      "lesson": 17
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede anidar transacciones en **ArangoDB**?",
+      "correct": false,
+      "lesson": 17
+    },
+    {
+      "type": "confirm",
+      "question": "¿Se puede usar la función **AQL** `fulltext()` sobre un campo no indexado mediante un índice `fulltext`?",
+      "correct": false,
+      "lesson": 18
+    }
+  ]
+}

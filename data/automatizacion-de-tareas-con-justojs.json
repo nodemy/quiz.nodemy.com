@@ -1,0 +1,173 @@
+{
+  "title": "Automatización de tareas con Justo.js",
+  "lang": "es",
+  "duration": 30,
+  "questions": [
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué componentes se puede extender la funcionalidad de *Justo*?",
+      "options": [
+        "Mediante *plugins*.",
+        "Mediante *módulos*.",
+        "Mediante *generadores*."
+      ],
+      "correct": [0, 1, 2],
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Qué paquete hay que instalar globalmente?",
+      "options": [
+        "`justo`",
+        "`justo-cli`"
+      ],
+      "correct": 1,
+      "lesson": 2
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué paquete se instala el comando `justo`?",
+      "correct": "justo-cli",
+      "lesson": 2
+    },
+    {
+      "type": "select",
+      "question": "¿Qué tipo de tarea define un trabajo indivisible?",
+      "options": [
+        "Tarea simple.",
+        "Macro.",
+        "Flujo de trabajo."
+      ],
+      "correct": 0,
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del paquete `justo` se crea una función de tarea simple?",
+      "prenote": "Indique el nombre en formato `función()`.",
+      "correct": "simple()",
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "¿Qué función hay que invocar para que *Justo* supervise la tarea y muestre su resultado en el informe final?",
+      "options": [
+        "Función de tarea.",
+        "Operación de tarea."
+      ],
+      "correct": 0,
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Mediante qué opción se puede restringir la ejecución de una tarea a sistemas *Linux*?",
+      "options": [
+        "ignore",
+        "only",
+        "onlyIf",
+        "skip"
+      ],
+      "correct": [0, 2],
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es la opción recomendada para indicar el título de una tarea en el informe final?",
+      "correct": "title",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué parámetro de la operación de tarea, *Justo* pasa los parámetros pasados en la invocación?",
+      "correct": "params",
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Cuál es el nombre del parámetro de una operación asíncrona de tarea, donde *Justo* inyecta o pasa la función que debe invocarse cuando la operación finalice?",
+      "correct": "done",
+      "lesson": 3
+    },
+    {
+      "type": "select",
+      "question": "Supongamos que tenemos una tarea simple registrada en el catálogo. ¿Cómo la invocaría pasándole los parámetros `1`, `2` y `3`?",
+      "options": [
+        "`justo tarea 1 2 3`",
+        "`justo tarea [1, 2, 3]`",
+        "`justo tarea:1:2:3`",
+        "`justo tarea:[1,2,3]`"
+      ],
+      "correct": 2,
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del paquete `justo` se crea una macro?",
+      "prenote": "Indíquela como sigue `función()`.",
+      "correct": "macro()",
+      "lesson": 4
+    },
+    {
+      "type": "input",
+      "question": "¿Mediante qué función del paquete `justo` se crea un flujo de trabajo?",
+      "prenote": "Indíquela usando el formato `función()`.",
+      "correct": "workflow()",
+      "lesson": 5
+    },
+    {
+      "type": "select",
+      "question": "¿Qué tipo de tarea utilizaría si está compuesta por varias tareas y no siempre se tienen que ejecutar todas?",
+      "options": [
+        "Tarea simple.",
+        "Macro.",
+        "Flujo de trabajo"
+      ],
+      "correct": 2,
+      "lesson": 5
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué tareas pueden ser síncronas?",
+      "options": [
+        "Tarea simple.",
+        "Macro.",
+        "Flujo de trabajo."
+      ],
+      "correct": [0, 1, 2],
+      "lesson": 3
+    },
+    {
+      "type": "multiselect",
+      "question": "¿Qué tareas pueden ser asíncronas?",
+      "options": [
+        "Tarea simple.",
+        "Macro.",
+        "Flujo de trabajo."
+      ],
+      "correct": [0, 1, 2],
+      "lesson": 3
+    },
+    {
+      "type": "input",
+      "question": "¿Qué generador utilizaría para crear un *plugin*?",
+      "correct": "justo-generator-plugin",
+      "lesson": 6
+    },
+    {
+      "type": "select",
+      "question": "Suponga que desea reutilizar una tarea en varios proyectos, ¿en qué tipo de componente lo definiría?",
+      "options": [
+        "En un *plugin*.",
+        "En un módulo."
+      ],
+      "correct": 0,
+      "lesson": 6
+    },
+    {
+      "type": "input",
+      "question": "¿Qué generador utilizaría para crear un *módulo*?",
+      "correct": "justo-generator-justo",
+      "lesson": 6
+    }
+  ]
+}
